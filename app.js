@@ -10,7 +10,7 @@ app.get('/stocks', async (req, res) => {
     const stockSymbols = await stocks.getStocks();
     res.send({ stockSymbols });
   } catch (error) {
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Internal Server Error'); // gives a 500 error which we can handle elsewhere
   }
 });
 
@@ -20,7 +20,7 @@ app.get('/stocks/:symbol', async (req, res) => {
     const data = await stocks.getStockPoints(symbol, new Date());
     res.send(data);
   } catch (error) {
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Internal Server Error'); // gives a 500 error which we can handle elsewhere
   }
 });
 
