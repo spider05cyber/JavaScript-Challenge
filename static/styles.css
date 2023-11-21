@@ -1,17 +1,26 @@
 .spinner{
   font-size: 140px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
 }
 .spinner:after {
-  content: '◌';
+  content: '◌'; /* ◌ */
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spin {
   animation: spin 1s linear infinite;
+  display: inline-block;
 }
 
 #chart {
