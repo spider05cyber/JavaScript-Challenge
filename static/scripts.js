@@ -55,13 +55,13 @@ async function fetchData() {
       }
     });
 
-    // spinner.classList.remove('spin'); // now we have loaded all the data (or we have errored in loading specific stock(S)), remove the spin class from the spinner, which stops the animation
-    // spinner.hidden = true; // and hide the spinner
+    spinner.classList.remove('spin'); // now we have loaded all the data (or we have errored in loading specific stock(S)), remove the spin class from the spinner, which stops the animation
+    spinner.hidden = true; // and hide the spinner
   } catch (error) {
     alert('Error fetching stock symbols list:\n' + error.message);  // alert the user of the error in the stock list via an alert box
     console.error('Error fetching stock symbols list:', error); // and also put it in the console
-    // spinner.classList.remove('spin'); // remove the animation if we have errored
-    // spinner.hidden = true; // and hide the spinner
+    spinner.classList.remove('spin'); // remove the animation if we have errored
+    spinner.hidden = true; // and hide the spinner
   }
 }
 
